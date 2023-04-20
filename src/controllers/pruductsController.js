@@ -29,6 +29,6 @@ export const actualizarProductoPorId = async (req, res) => {
 export const eliminarProductoPorId = async (req, res) => {
 
     const producto = await products.findByPk(req.params.id);
-    await products.destroy();
+    await producto.destroy();
     res.json("eliminarProductoPorId");
 };

@@ -6,13 +6,13 @@ const products = sequelize.define("products",
     {
         name:
             { type: DataTypes.STRING, allowNull: false },
-        Price:
-            { type: DataTypes.DECIMAL(10,2),allowNull: false },
+        price:
+            { type: DataTypes.DECIMAL(10, 2), allowNull: false },
         descripcion:
             { type: DataTypes.TEXT, allowNull: true },
     },
     {
-        timestamps: true
+        timestamps: false
     }
 );
 
