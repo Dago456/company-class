@@ -9,11 +9,11 @@ router.get("/:id", productsController.obtenerProductoPorId)
 
 router.post("/", productsController.crearProducto)
 
-router.put("/", productsController.actualizarProductoPorId)
+router.put('/:id', productsController.actualizarProductoPorId )
 
-router.delete("/", productsController.eliminarProductoPorId)
-
+router.delete('/:id', productsController.eliminarProductoPorId )
 export default router;
+
 
 
 

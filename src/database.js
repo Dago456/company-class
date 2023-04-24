@@ -1,14 +1,15 @@
-import { Sequelize } from "sequelize";
-const sequelize = new Sequelize("company", 'root', '', {
+import { Sequelize } from 'sequelize';
+
+const sequelize = new Sequelize('company', 'root', '', {
   host: 'localhost',
   dialect: 'mysql'
 });
 
 try {
   sequelize.authenticate();
-  console.log('Conexión establecida con la base de datos.');
+  console.log('Conexion exitosa a mysql.');
 } catch (error) {
-  console.error('No se pudo conectar con la base de datos:', error);
-};
+  console.error('No se establecio la conexion a la db:', error);
+}
 
 export default sequelize;

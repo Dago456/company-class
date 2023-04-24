@@ -2,27 +2,24 @@ const { DataTypes } = require("sequelize");
 
 import sequelize from "../database";
 
-const products = sequelize.define("products",
-    {
-        name:
-            { type: DataTypes.STRING, allowNull: false },
-        price:
-            { type: DataTypes.DECIMAL(10, 2), allowNull: false },
-        descripcion:
-            { type: DataTypes.TEXT, allowNull: true },
+const Product = sequelize.define('product',{
+    name:{
+        type: DataTypes.STRING,
+        allowNull:false
     },
-    {
-        timestamps: false
-    }
+
+    price:{
+        type: DataTypes.DECIMAL(10,2),
+        allowNull:false
+    },
+    descripcion:{
+        type: DataTypes.TEXT,
+        allowNull:true
+    },
+},
+{
+    timestamps:false,
+}
 );
 
-export default products;
-
-
-
-
-
-
-
-
-
+export default Product
